@@ -1,0 +1,11 @@
+development:
+  :concurrency: 5
+production:
+  :concurrency: 20
+:queues:
+  - default
+  - mailers
+
+#:schedule:
+#  DoSomeWorker:
+#    every: '6m'

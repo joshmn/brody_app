@@ -1,0 +1,10 @@
+<div class="flash-container" style="<% if flash.any? %>padding-top:1rem;<% end %>">
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= flash_class[key] %> alert-dismissable" role="alert" data-flash-key="<%=key %>">
+      <button type="button" class="close dismiss_flash" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <p class="mb-0"><%= format_flash_message(value) %></p>
+    </div>
+  <% end %>
+</div>
